@@ -1,0 +1,10 @@
+alias "python=/usr/local/bin/python3"
+alias "pbc=pbcopy"
+alias "pbp=pbpaste"
+alias "rng=ranger"
+alias ctags="`brew --prefix`/bin/ctags"
+alias "zth=zathura"
+alias "markd=/Users/palashahuja/Documents/shellfiles/markd"
+alias tmux="TERM=screen-256color-bce tmux -2"
+alias "e=vim"
+alias git-root='cd $(git rev-parse --show-toplevel)'

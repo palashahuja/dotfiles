@@ -3,20 +3,25 @@ syntax on
 set nofoldenable
 set noswapfile
 
-" colorscheme codeschool
 
 " set the visual error bell 
 set visualbell t_vb=    
 
 
-" mapping escape key
-let g:easyescape_chars = { "k": 1, "l": 1 }
-let g:easyescape_timeout = 100
-cnoremap lk <ESC>
-cnoremap kl <ESC>
-color dracula
+let g:dracula_italic = 0
+colorscheme dracula
+highlight Normal ctermbg=234 guibg=#191A21
 
 
+
+
+
+" mapping escape key to clear the search highlighting
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
+" timeout for escape mode
+set timeoutlen=1000 ttimeoutlen=0
 
 
 "Set utf-8 as standard encoding and en_us are standard encoding
@@ -25,6 +30,7 @@ set encoding=utf-8
 "Display line numbers on the left
 "These will be relative numbers
 set number
+set relativenumber
 
 " enable mouse
 set mouse=a
@@ -137,9 +143,9 @@ function! VimuxRunMake()
     call VimuxSendKeys("Enter")
 endfunction
 
-map <Leader>cc :call VimuxCompile()<CR>
-map <Leader>lc :call VimuxClean()<CR>
-map <Leader>lr :call VimuxRunMake()<CR>
+map <Leader>co :call VimuxCompile()<CR>
+map <Leader>cl :call VimuxClean()<CR>
+map <Leader>ma :call VimuxRunMake()<CR>
 
 
 
@@ -189,7 +195,6 @@ nmap <Leader>f <Plug>(easymotion-overwin-f)
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 
-let @a=" [ ]"
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
@@ -197,7 +202,6 @@ endif
 
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
-map <Leader>cl :noh
 
 let g:auto_save = 1
 let g:markdown_enable_spell_checking = 0
@@ -205,3 +209,18 @@ let g:auto_save_in_insert_mode = 0
 let g:tmpl_search_paths = ['~/.vim/templates']
 let g:tmpl_auto_initialize = 0
 
+noremap <Leader>. :CtrlPTag<CR>
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" NERD Tree toggle
+map <C-n> :NERDTreeToggle<CR>
+
+map <Leader>cc :cclose<CR>
+" Tab Navigation
+
+map <Leader>p go
+
+nnoremap K gt
+nnoremap J gT

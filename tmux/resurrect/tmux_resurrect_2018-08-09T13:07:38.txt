@@ -1,0 +1,7 @@
+pane	nodejs-2048-session	1	:game-nodejs	1	:*	0	:/Users/palashahuja/Documents/repos/node_projects/2048	1	vim	:vim -S
+pane	nodejs-2048-session	2	:redux-project	0	:-	0	:/Users/palashahuja/Documents/repos/node_projects/react-redux-realworld-example-app	1	vim	:vim -S
+pane	nodejs-2048-session	3	:notes	0	:	0	:/Users/palashahuja/Documents/notes/Paper Notes	1	vim	:vim -S
+window	nodejs-2048-session	1	1	:*	affd,141x41,0,0,0
+window	nodejs-2048-session	2	0	:-	affe,141x41,0,0,1
+window	nodejs-2048-session	3	0	:	afff,141x41,0,0,2
+state	nodejs-2048-session	

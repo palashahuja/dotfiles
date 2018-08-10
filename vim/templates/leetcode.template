@@ -1,0 +1,33 @@
+/**
+*  @created: {{TODAY}}
+*  @filename: {{FILE}}
+**/
+
+
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <sstream>
+#include <queue>
+#include <deque>
+#include <bitset>
+#include <iterator>
+#include <list>
+#include <stack>
+#include <map>
+#include <set>
+#include <functional>
+#include <numeric>
+#include <utility>
+#include <limits>
+
+using namespace std;
+
+int main(){
+    return 0;
+}
+
+
+
