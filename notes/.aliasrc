@@ -1,0 +1,29 @@
+alias yrc="vim ~/.notes/yabairc"
+alias notes="~/.scripts/openfzf.sh"
+alias arc="vim ~/.notes/.aliasrc"
+alias vrc="vim ~/.vimrc"
+alias trc="vim ~/.tmux.conf"
+
+# vifm directories
+alias vifm="set MYVIFMRC='~/.config/vifm/vifmrc';source ~/bin/vf;"
+alias vf="vifm"
+alias vfd="cd ~/Downloads; vf"
+
+# leetcode alias
+alias ltcd="leetcode"
+
+alias nts="cd ~/.notes/cur"
+alias todo="vim ~/.notes/todo.md"
+alias srbc="source ~/.bashrc"
+
+
+# bfg
+alias bfg="java -jar ~/.config/bfg/bfg-1.13.0.jar"
+
+# brew services stop and start
+alias brew_fs="brew services stop skhd; brew services stop yabai"
+alias brew_st="brew services start skhd; brew services start yabai"
+
+
+# for vscode the alias is 
+alias vsc="code -n ."
