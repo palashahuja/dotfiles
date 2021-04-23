@@ -1,0 +1,12 @@
+
+file="$1"
+filename=`echo ${file%.*}`
+dir=$(dirname "$file")
+
+cd "$dir" || exit
+clear
+case "$file" in
+	*\.py) python "$file" ;;
+        *\.md) /usr/local/bin/pandoc "$file" --pdf-engine=xelatex -o "$filename".pdf ;;
+	*\.rs) cargo build ;;
+esac

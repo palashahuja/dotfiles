@@ -1,0 +1,11 @@
+file="$1"
+filename="${file%.*}"
+dir=$(dirname "$file")
+
+cd "$dir" || exit
+
+clear
+
+case "$file" in
+	*\.md) open "$filename".pdf ;;
+esac
