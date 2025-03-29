@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: daily-log
+# uuid:
+# key: daily-log
+# condition: t
+# --
+* Daily Log  $0
+** Morning
+** Afternoon
+** Work
+** Diet
+** Evening
